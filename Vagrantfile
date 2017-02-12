@@ -18,7 +18,7 @@ Vagrant.configure(2) do |config|
           #Installazione necessaria per il modulo ping di ansible
           sudo apt-get -y install python-simplejson
           #Installazione di ansible
-          sudo apt-get -y ansible
+          sudo apt-get -y install ansible
         SHELL
     end
 end
