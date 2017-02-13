@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
           #Installazione necessaria per il modulo ping di ansible
           sudo apt-get -y install python-simplejson
         SHELL
-      ansible.playbook = "nginx.yml"
+
     end
     config.vm.define "ansible" do |ansible|
       ansible.vm.box = "ubuntu/xenial64"
@@ -20,6 +20,9 @@ Vagrant.configure(2) do |config|
           sudo apt-get -y install python-simplejson
           #Installazione di ansible
           sudo apt-get -y install ansible
+          sudo apt-get update && sudo apt-get install -y python-pip
+          sudo pip install boto awscli
+          pip install --upgrade pip
         SHELL
     end
 end
